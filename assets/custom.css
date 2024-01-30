@@ -1,0 +1,142 @@
+@font-face {
+    font-family: 'switzer';
+    src: url('./fonts/Switzer-Regular.woff2') format('woff2'),
+         url('./fonts/Switzer-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.mern_Slides h2, .mern_Slides p, .mern_Slides .slider_btn {
+    font-family: 'switzer';
+}
+/* Slider Css Start*/
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+  }
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    text-decoration: none !important;
+  }
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  .mern_Slides .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 10px;
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    text-align: center;
+  }
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  .slide_dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .active, .slide_dot:hover {
+    background-color: #717171;
+  }
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+  .mern_Slides h2 {
+    color: #ffffff;
+}
+.mern_Slides a.slider_btn {
+    padding: 10px 30px;
+    background-color: #7c7c8f;
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+}
+@media screen and (max-width: 768px) {
+    .mern_Slides .text {
+        bottom: 40%;
+    }
+    .mern_Slides .text p{
+        display: none;
+    }
+}
+@media screen and (max-width: 425px) {
+    .mern_Slides .text {
+        bottom: 30%;
+    }
+}
+
+
+/* Like Share Print CSS start */
+
+.share_con .icons_con {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 8px;
+    width: 150px;
+    box-shadow: 0px 10px 25px 0px rgba(28,45,113,.10);
+    padding: 10px;
+    border-radius: 8px;
+    display: none;
+    position: absolute;
+    background: #ffffff;
+    z-index: 9;
+}
+.share_con:hover .icons_con {
+    display: grid;
+}
+.like-share-con {
+    display: flex;
+    align-items: center;
+}
+.like-share-con .like_con img.li_img {
+    display: none;
+}
+.like-share-con div img {
+    width: 30px;
+}
+.like-share-con .lsp-con-f {
+    margin: 5px;
+}
+.like_con .like-button.like_active .un_img{
+  display: none;
+}
+.like_con .like-button.like_active .li_img{
+  display: block;
+}
